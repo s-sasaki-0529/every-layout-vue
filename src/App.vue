@@ -1,7 +1,20 @@
 <template>
-  <h1>Hello, World</h1>
+  <Stack space="1rem">
+    <div>Hoge</div>
+    <Stack space="3rem">
+      <div>Hoge</div>
+    </Stack>
+    <div>Hoge</div>
+  </Stack>
 </template>
 
-<script setup></script>
+<script>
+import Stack from "./components/Stack.vue";
+export default {
+  components: {
+    Stack,
+  },
+};
+</script>
 
 <style></style>
