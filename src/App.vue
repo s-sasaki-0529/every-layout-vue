@@ -1,20 +1,28 @@
 <template>
-  <Stack space="1rem">
-    <div>Hoge</div>
-    <Stack space="3rem">
-      <div>Hoge</div>
-    </Stack>
-    <div>Hoge</div>
-  </Stack>
+  <div class="app">
+    <Sidebar>
+      <template v-slot:sidebar>
+        <h1>Sidebar</h1>
+      </template>
+      <template v-slot:not-sidebar>
+        <h1>NotSidebar</h1>
+      </template>
+    </Sidebar>
+  </div>
 </template>
 
 <script>
-import Stack from "./components/Stack.vue";
+import Sidebar from "./components/Sidebar.vue";
 export default {
   components: {
-    Stack,
+    Sidebar,
   },
 };
 </script>
 
-<style></style>
+<style scoped>
+.app {
+  width: 100vw;
+  height: 100vh;
+}
+</style>
